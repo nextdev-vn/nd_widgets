@@ -1,0 +1,19 @@
+enum NDToastPosition {
+  TOP,
+
+  BOTTOM,
+
+  CENTER,
+
+  TOP_LEFT,
+
+  TOP_RIGHT,
+
+  BOTTOM_LEFT,
+
+  BOTTOM_RIGHT,
+
+  CENTER_LEFT,
+
+  CENTER_RIGHT,
+}
