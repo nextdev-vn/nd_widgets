@@ -211,7 +211,7 @@ class MySingleChoiceSearchState<T> extends State<NDSearchBar<T?>> {
     final RenderBox searchBoxRenderBox =
         context.findRenderObject() as RenderBox;
     final RenderBox overlay =
-        Overlay.of(context)?.context.findRenderObject() as RenderBox;
+        Overlay.of(context).context.findRenderObject() as RenderBox;
     final width = searchBoxRenderBox.size.width;
     final position = RelativeRect.fromRect(
       Rect.fromPoints(
@@ -296,6 +296,6 @@ class MySingleChoiceSearchState<T> extends State<NDSearchBar<T?>> {
                 ),
               ),
             ));
-    Overlay.of(context)?.insert(overlaySearchList!);
+    Overlay.of(context).insert(overlaySearchList!);
   }
 }

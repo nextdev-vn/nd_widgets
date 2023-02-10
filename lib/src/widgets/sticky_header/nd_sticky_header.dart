@@ -37,7 +37,7 @@ class NDStickyHeader extends MultiChildRenderObjectWidget {
 
   @override
   RenderNDStickyHeader createRenderObject(BuildContext context) {
-    final scrollable = Scrollable.of(context)!;
+    final scrollable = Scrollable.of(context);
     return RenderNDStickyHeader(
       direction: direction,
       scrollable: scrollable,

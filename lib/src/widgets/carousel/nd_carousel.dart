@@ -193,7 +193,7 @@ class _NDCarouselState extends State<NDCarousel> with TickerProviderStateMixin {
                         pageController.position.context.storageContext;
                     final double? previousSavedPosition =
                         PageStorage.of(storageContext)
-                            ?.readState(storageContext);
+                            .readState(storageContext);
                     if (previousSavedPosition != null) {
                       value = previousSavedPosition - i.toDouble();
                     } else {
