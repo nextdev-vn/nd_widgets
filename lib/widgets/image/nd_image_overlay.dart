@@ -12,8 +12,9 @@ class NDImageOverlay extends StatelessWidget {
     this.child = const Text(''),
     this.alignment,
     this.borderRadius,
-    this.colorFilter =
-        const ColorFilter.mode(Colors.black26, BlendMode.colorBurn),
+    // this.colorFilter =
+    //     const ColorFilter.mode(Colors.black26, BlendMode.colorBurn),
+    this.colorFilter,
     this.boxFit = BoxFit.fill,
     this.border,
     this.shape = BoxShape.rectangle,
