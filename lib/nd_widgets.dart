@@ -65,6 +65,7 @@ export 'widgets/tabs/nd_segment_tabs.dart';
 export 'widgets/tabs/nd_tabbar.dart';
 export 'widgets/tabs/nd_tabbar_view.dart';
 export 'widgets/tabs/nd_tabs.dart';
+export 'widgets/nd_textfield_widget/nd_textfield_widget.dart';
 export 'widgets/text_field/nd_text_field.dart';
 export 'widgets/text_field/nd_text_field_pill.dart';
 export 'widgets/text_field/nd_text_field_rounded.dart';
