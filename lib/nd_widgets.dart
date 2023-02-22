@@ -72,6 +72,8 @@ export 'widgets/text_field/nd_text_field_squared.dart';
 export 'widgets/toast/nd_toast.dart';
 export 'widgets/toggle/nd_toggle.dart';
 export 'widgets/typography/nd_typography.dart';
+export 'widgets/bottom_navbar/nd_bottom_navbar.dart';
+
 
 export 'constants/colors/nd_color.dart';
 export 'constants/colors/nd_social_color.dart';
