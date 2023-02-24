@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+class NdTextFieldWidgetColors{
+  static const Color borderColor = Color(0xFFDDDDDD);
+}
+
 class NdTextFieldWidget extends StatefulWidget {
   const NdTextFieldWidget({
     Key? key,
@@ -72,44 +76,44 @@ class _NdTextFieldWidgetState extends State<NdTextFieldWidget> {
   _buildBorder(BuildContext context) {
     return widget.noneBorder == null
         ? OutlineInputBorder(
-            borderRadius: BorderRadius.circular(widget.borderRadius ?? 0),
-            borderSide:
-                BorderSide(color: widget.borderColor ?? Theme.of(context).inputDecorationTheme.border!.borderSide.color, width: widget.borderWidth),
-          )
+      borderRadius: BorderRadius.circular(widget.borderRadius ?? 0),
+      borderSide:
+      BorderSide(color: widget.borderColor ?? NdTextFieldWidgetColors.borderColor, width: widget.borderWidth),
+    )
         : null;
   }
 
   _buildBorderFocused(BuildContext context) {
     return widget.noneBorder == null
         ? OutlineInputBorder(
-            borderRadius: BorderRadius.circular(widget.borderRadius ?? 0),
-            borderSide: BorderSide(
-                color: (widget.noneBorderFocus == true)
-                    ? Theme.of(context).inputDecorationTheme.border!.borderSide.color
-                    : Theme.of(context).primaryColor, width: widget.borderWidth),
-          )
+      borderRadius: BorderRadius.circular(widget.borderRadius ?? 0),
+      borderSide: BorderSide(
+          color: (widget.noneBorderFocus == true)
+              ? NdTextFieldWidgetColors.borderColor
+              : Theme.of(context).primaryColor, width: widget.borderWidth),
+    )
         : null;
   }
 
   _buildErrorBorder(BuildContext context) {
     return widget.noneBorder == null
         ? OutlineInputBorder(
-            borderRadius: BorderRadius.circular(widget.borderRadius ?? 0),
-            borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.error, width: widget.borderWidth
-            ),
-          )
+      borderRadius: BorderRadius.circular(widget.borderRadius ?? 0),
+      borderSide: BorderSide(
+          color: Theme.of(context).colorScheme.error, width: widget.borderWidth
+      ),
+    )
         : null;
   }
 
   _buildFocusedErrorBorder(BuildContext context) {
     return widget.noneBorder == null
         ? OutlineInputBorder(
-            borderRadius: BorderRadius.circular(widget.borderRadius ?? 0),
-            borderSide: BorderSide(
-              color: Theme.of(context).colorScheme.error, width: widget.borderWidth
-            ),
-          )
+      borderRadius: BorderRadius.circular(widget.borderRadius ?? 0),
+      borderSide: BorderSide(
+          color: Theme.of(context).colorScheme.error, width: widget.borderWidth
+      ),
+    )
         : null;
   }
 
@@ -162,17 +166,17 @@ class _NdTextFieldWidgetState extends State<NdTextFieldWidget> {
         contentPadding: widget.contentPadding ?? const EdgeInsets.symmetric(
             vertical: 17, horizontal: 15),
         floatingLabelBehavior:
-            widget.floatingLabelBehavior ?? FloatingLabelBehavior.never,
+        widget.floatingLabelBehavior ?? FloatingLabelBehavior.never,
         labelText:
-            widget.isRequiredField ? '${widget.labelText}*' : widget.labelText,
+        widget.isRequiredField ? '${widget.labelText}*' : widget.labelText,
         labelStyle: const TextStyle(color: Color(0xFF9098B1)),
         prefixIcon: widget.prefixIcon != null
             ? _buildPrefixIcon()
             : widget.prefixImage != null
-                ? _buildPrefixImage()
-                : null,
+            ? _buildPrefixImage()
+            : null,
         suffixIcon:
-            widget.isPasswordField == true ? _buildShowPassword() : null,
+        widget.isPasswordField == true ? _buildShowPassword() : null,
         errorText: widget.error,
         enabledBorder: _buildBorder(context),
         focusedBorder: _buildBorderFocused(context),
